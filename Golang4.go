@@ -67,6 +67,7 @@ func calc_(f calculator, a int, b int) int {
 }
 
 // 클로저 정의(Closure)
+// 함수를 반환
 func nextValue() func() int {
 	i := 0
 	return func() int {
