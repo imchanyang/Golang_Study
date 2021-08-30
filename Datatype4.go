@@ -28,4 +28,18 @@ func main() {
 	// 실제 크기를 구하려면
 	fmt.Println(utf8.RuneCountInString(s1))
 	fmt.Printf("%c\n", s2[1])
+
+	// 상수 열거형 사용하기
+	const (
+		Sunday = iota
+		Monday
+		Tuesday
+		Wednesday
+		Thursday
+		Friday
+		Satuday
+		numberOfDays
+	)
+	fmt.Println("-----------")
+	fmt.Println(Tuesday)
 }
