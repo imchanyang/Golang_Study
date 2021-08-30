@@ -36,5 +36,7 @@ func main() {
 	bytes := []byte(str)
 	str2 := string(bytes)
 	println(str, bytes, str2)
+
+	fmt.Println(-29%392)
 }
 
