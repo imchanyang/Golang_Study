@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 
 	//for문 : 기본적인 반복문
@@ -46,6 +48,42 @@ func main() {
 
 	END:
 	println("End")
+
+
+	// Loop:
+	// Loop:와 for문 사이에 무언가가 있으면 에
+Loop:
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 3; j++ {
+			if j == 2 {
+				break Loop
+			}
+
+			fmt.Println(i, j)
+		}
+	}
+
+	fmt.Println("Hello, world!")
+
+
+Loop2:
+	for i := 0; i < 3; i++ {              // 반복문 1
+		for j := 0; j < 3; j++ {      // 반복문 2
+			if j == 2 {           // j가 2일 때
+				continue Loop2 // 아래 부분 코드를 실행하지 않고 반복문 1부터 이어서 실행
+			}
+
+			fmt.Println(i, j)
+		}
+	}
+
+	fmt.Println("Hello, world!")
+
+
+	// for문에서 변수 여러 개 사용
+	for i, j := 0, 0; i < 10; i, j = i + 1, j + 2 {
+		fmt.Println(i, j)
+	}
 }
 
 
