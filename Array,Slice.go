@@ -57,4 +57,59 @@ func main() {
     fmt.Println(len(s))
     fmt.Println(cap(s))
 
+    // 슬라이스에 값 추가하기
+    s = append(s, 4, 5, 6)
+    fmt.Println(s)
+    fmt.Println(len(s))
+    fmt.Println(cap(s))
+
+    // 슬라이스에 슬라이스를 붙일 때
+    s = append(s, s_...)
+    fmt.Println(s)
+	fmt.Println(len(s))
+	fmt.Println(cap(s))
+
+    // 배열 예시
+    S := [3]int{1, 2, 3}
+    var c [3]int
+
+    c = S
+    c[0] = 5
+    fmt.Println(S)
+    fmt.Println(c)
+
+    // 슬라이스 예시 reference
+    S_ := []int {1, 2, 3}
+    var c_ []int
+
+    c_ = S_
+    c_[0] = 5
+    fmt.Println(S_)
+    fmt.Println(c_)
+
+    // 슬라이스 복사하기
+    // 길이만큼 복사됨
+    // 복사이기 때문에 t_를 바꿔도 t는 바뀌지 않음
+    t := []int{1, 2, 3, 4, 5}
+    t_ := make([]int, 3)
+
+    copy(t_, t)
+    fmt.Println(t)
+    fmt.Println(t_)
+    t_[0] = 7
+    fmt.Println(t)
+    fmt.Println(t_)
+
+
+    fmt.Println(t[0:3])
+    T := t[0:3]
+    fmt.Println(T)
+    T[0] = 100
+
+    // 부분으로 슬라이스를 참조
+    // 따라서 값이 같이 바뀐다
+    fmt.Println(t)
+    fmt.Println(T)
+
+
 }
